@@ -1,0 +1,22 @@
+<div id="parcelado">
+    <?php
+    $_product = $this->getProduct();
+    $capital = $_product->getFinalPrice(); // Use getFinalPrice() para garantir que o preço correto seja retornado
+    $_max_parcelas = 15; // Máximo de parcelas no cartão
+    $cartao = number_format($capital / $_max_parcelas, 2, ',', '.');
+    $boleto = $capital * 0.8; // Desconto à vista no boleto
+    ?>
+    <font style="color:#656565"><b>Por:</b></font> 
+    <font style="font-size:14px; font-weight:bold;color:#656565;">R$<?php echo number_format($capital, 2, ',', '.'); ?></font>
+    <br/> 
+    <font style="color:#656565"><b>em</b></font> 
+    <font style="font-size:16px; font-weight:bold;color:#156EAF;"><?php echo $_max_parcelas; ?>x</font> 
+    <font style="color:#656565"><b>de</b></font> 
+    <strong><font style="font-size:16px; font-weight:bold;color:#156EAF;">R$<?php echo $cartao; ?></font></strong> 
+    <font style="color:#656565"><b>sem juros no cartão.</b></font>
+    <br/>
+    <font style="color:#656565"><b>ou</b></font> 
+    <font style="font-size:16px;font-weight:bold;color:#156EAF;">R$<?php echo number_format($boleto, 2, ',', '.'); ?></font> 
+    <font style="color:#656565"><b>à vista com</b></font>
+    <font style="color:#CF1919; font-size:14px;"><b>20%</b> de desconto no boleto.</font>
+</div>
