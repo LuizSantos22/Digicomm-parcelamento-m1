@@ -1,0 +1,1 @@
+<block type="catalog/product_view" name="product.parcelas" as="parcelas" template="catalog/product/view/parcelas.phtml"/>
