@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Digicomm_Parcelamento>
+            <version>0.0.1</version>
+        </Digicomm_Parcelamento>
+    </modules>
+    <frontend>
+        <routers>
+            <parcelamento>
+                <use>standard</use>
+                <args>
+                    <module>Digicomm_Parcelamento</module>
+                    <frontName>parcelamento</frontName>
+                </args>
+            </parcelamento>
+        </routers>
+        <layout>
+            <updates>
+                <parcelamento>
+                    <file>digicommParcelamento.xml</file>
+                </parcelamento>
+            </updates>
+        </layout>
+    </frontend>
+</config>
