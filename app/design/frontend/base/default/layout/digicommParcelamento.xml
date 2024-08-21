@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <parcelamento_parcela_index>
+        <reference name="root">
+            <action method="setTemplate">
+                <template>page/3columns.phtml</template>
+            </action>
+        </reference>
+        <reference name="content">
+            <block type="core/template" name="parcelamento.parcelas" template="parcelamento/parcela/parcelaProduto.phtml"/>
+        </reference>
+    </parcelamento_parcela_index>
+</layout>
